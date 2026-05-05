@@ -24,9 +24,8 @@ git clone https://github.com/yourusername/site-resetter.git
 
 1. 打开 Chrome，访问 `chrome://extensions/`
 2. 开启右上角「开发者模式」
-3. 点击「加载已解压的扩展程序」
-4. 选择 `site-resetter` 项目目录
-5. 扩展图标出现在工具栏即可使用
+3. 直接将解压后的文件夹拖入窗口
+4. 扩展图标出现在工具栏即可使用
 
 ## 🧭 使用指南
 
