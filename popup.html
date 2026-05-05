@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Resetter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔄 Site Resetter</h1>
+      <p class="subtitle">精准清理 &middot; 一键重置</p>
+    </div>
+
+    <div id="site-info" class="site-info">
+      <div class="site-label">当前站点</div>
+      <div id="site-url" class="site-url">检测中...</div>
+    </div>
+
+    <div id="youdao-tip" class="youdao-tip" style="display: none;">
+      <span class="tip-icon">🎯</span>
+      <span class="tip-text">检测到目标站点，清理后可尝试恢复免费额度</span>
+    </div>
+
+    <div class="clean-list">
+      <div class="clean-item">📦 缓存 (Cache)</div>
+      <div class="clean-item">🍪 Cookie</div>
+      <div class="clean-item">💾 本地存储 (LocalStorage)</div>
+      <div class="clean-item">🔧 服务工作线程 (ServiceWorker)</div>
+      <div class="clean-item">🗄️ 数据库 (IndexedDB)</div>
+    </div>
+
+    <div class="btn-wrapper">
+      <button id="reset-btn" class="reset-btn">
+        <span id="btn-text">一键重置</span>
+        <span id="btn-loader" class="loader" style="display: none;"></span>
+      </button>
+      <span id="reset-tooltip" class="reset-tooltip"></span>
+    </div>
+
+    <div id="reminder-card" style="display: none;">
+      <div class="reminder-card-row">
+        <span id="reminder-text" class="reminder-card-text"></span>
+        <button id="reminder-got-it" class="reminder-btn">我知道了</button>
+        <button id="reminder-confirm" class="reminder-btn" style="display: none;">确认</button>
+      </div>
+    </div>
+
+    <div id="error-msg" class="error-msg" style="display: none;"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

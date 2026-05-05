@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Site Resetter",
+  "version": "1.0.0",
+  "description": "精准清除当前活动标签页的数据，通过一键重置恢复网站初始访问状态",
+  "author": "Site Resetter Contributors",
+  "homepage_url": "https://github.com/yourusername/site-resetter",
+  "permissions": [
+    "browsingData",
+    "activeTab",
+    "tabs",
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "reset-site": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "触发一键重置，清理当前网站数据并刷新页面"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
